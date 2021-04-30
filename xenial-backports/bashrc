@@ -98,9 +98,15 @@ function bb {
     su - build -c "DEB_BUILD_OPTIONS='noddebs parallel=7' apt-get source -b $1"
     [[ $? -eq 0 ]] && mv /home/build/*.deb . && echo && ls -l *.deb
 }
+function bblibs {
+    bb $1 && mkdir -p /data/libs/$1 && mv *.deb /data/libs/$1/
+}
 
 
-sed -i 's/mirrors.aliyun.com/mirrors.tencent.com/' /etc/apt/sources.list
+cat > /etc/apt/sources.list <<EOF
+deb http://mirrors.tencent.com/ubuntu/ xenial main universe multiverse
+deb http://mirrors.tencent.com/ubuntu/ xenial-updates main universe multiverse
+EOF
 source /etc/bash_completion
 cd ~
 ensrc

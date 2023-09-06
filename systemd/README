@@ -1,0 +1,8 @@
+- Log
+  docker run --restart=unless-stopped --network=host --tmpfs /run -v /sys/fs/cgroup:/sys/fs/cgroup:ro -v $PWD/systemd-journald.service:/usr/lib/systemd/system/systemd-journald.service --name systemd -d lxf1992521/systemd:centos sh -c 'sleep 3 & exec /usr/lib/systemd/systemd'
+
+- Docker
+  ... -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker ...
+
+- Run Command in Host By Docker
+  docker run --rm -it -v /usr/bin/systemd-run:/usr/bin/systemd-run -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket debian:bullseye-20230522-slim systemd-run bash -c 'echo hello'

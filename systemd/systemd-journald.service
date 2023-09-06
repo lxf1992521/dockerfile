@@ -1,0 +1,32 @@
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+
+[Unit]
+Description=Journal Service
+Documentation=man:systemd-journald.service(8) man:journald.conf(5)
+DefaultDependencies=no
+Requires=systemd-journald.socket
+After=systemd-journald.socket syslog.socket
+Before=sysinit.target
+
+[Service]
+Type=notify
+Sockets=systemd-journald.socket
+ExecStart=/usr/lib/systemd/systemd-journald
+ExecStartPost=/usr/bin/systemd-run --unit=systemd-journald-console sh -c 'until test -e /proc/`pgrep -x sleep | head -n 1`/fd/1; do :; done; pid=`pgrep -x sleep | head -n 1`; exec /usr/bin/journalctl --boot --follow --no-tail > /proc/$pid/fd/1 2> /proc/$pid/fd/2'
+Restart=always
+RestartSec=0
+StandardOutput=null
+FileDescriptorStoreMax=4224
+CapabilityBoundingSet=CAP_SYS_ADMIN CAP_DAC_OVERRIDE CAP_SYS_PTRACE CAP_SYSLOG CAP_AUDIT_CONTROL CAP_AUDIT_READ CAP_CHOWN CAP_DAC_READ_SEARCH CAP_FOWNER CAP_SETUID CAP_SETGID CAP_MAC_OVERRIDE
+WatchdogSec=3min
+
+# Increase the default a bit in order to allow many simultaneous
+# services being run since we keep one fd open per service. Also, when
+# flushing journal files to disk, we might need a lot of fds when many
+# journal files are combined.
+LimitNOFILE=16384

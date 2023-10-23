@@ -1,8 +1,7 @@
-################### README ##############################################
-## 1. 运行时必须添加 --cap-add NET_ADMIN 容器参数
-## 2. 在容器内部手动创建 tun 字符设备：mkdir -p /dev/net && mknod /dev/net/tun c 10 200
-##    或者直接将宿主机的 tun 字符设备 /dev/net/tun 挂载到容器内 /dev/net/tun
-##
+# 1. 运行时必须添加 --cap-add NET_ADMIN 容器参数
+# 2. 在容器内部手动创建 tun 字符设备：mkdir -p /dev/net && mknod /dev/net/tun c 10 200
+#    或者直接将宿主机的 tun 字符设备 /dev/net/tun 挂载到容器内 /dev/net/tun
+#
 
 FROM centos:7.9.2009
 

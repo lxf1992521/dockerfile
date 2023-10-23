@@ -15,21 +15,24 @@ alias egrep='egrep --color=auto'
 
 # APT SOURCES
 cat > /etc/apt/sources.list <<EOF
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial main universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main universe multiverse
 EOF
-for rel in yakkety zesty artful cosmic disco eoan groovy hirsute impish; do
+for rel in yakkety zesty artful cosmic disco eoan groovy hirsute impish kinetic; do
 cat >> /etc/apt/sources.list <<EOF
-deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel} main universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-updates main universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-backports main universe multiverse
+# deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel} main universe multiverse
+# deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-updates main universe multiverse
+# deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-backports main universe multiverse
+deb-src http://old-releases.ubuntu.com/ubuntu ${rel} main universe multiverse
+deb-src http://old-releases.ubuntu.com/ubuntu ${rel}-updates main universe multiverse
+deb-src http://old-releases.ubuntu.com/ubuntu ${rel}-backports main universe multiverse
 EOF
 done
-for rel in bionic focal jammy kinetic lunar mantic; do
+for rel in bionic focal jammy lunar mantic; do
 cat >> /etc/apt/sources.list <<EOF
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ ${rel} main universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ ${rel}-updates main universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ ${rel}-backports main universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ ${rel} main universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ ${rel}-updates main universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ ${rel}-backports main universe multiverse
 EOF
 done
 apt-get -q update
@@ -77,7 +80,7 @@ function en {
                     line=$(sed 's/^/ /' <<<"$line")
                 fi
                 case $rel in
-                    mantic|lunar|kinetic|jammy|focal|bionic)
+                    mantic|lunar|jammy|focal|bionic)
                         grep " $repo/" <<<"$line"
                         ;;
                     *)

@@ -20,12 +20,9 @@ deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main universe multiverse
 EOF
 for rel in yakkety zesty artful cosmic disco eoan groovy hirsute impish kinetic; do
 cat >> /etc/apt/sources.list <<EOF
-# deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel} main universe multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-updates main universe multiverse
-# deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-backports main universe multiverse
-deb-src http://old-releases.ubuntu.com/ubuntu ${rel} main universe multiverse
-deb-src http://old-releases.ubuntu.com/ubuntu ${rel}-updates main universe multiverse
-deb-src http://old-releases.ubuntu.com/ubuntu ${rel}-backports main universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel} main universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-updates main universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-backports main universe multiverse
 EOF
 done
 for rel in bionic focal jammy lunar mantic; do
@@ -38,18 +35,10 @@ done
 apt-get -q update
 
 
-# DEBHELPER
-# function en10 {
-#     cat > /etc/apt/preferences.d/backports <<EOF
-# Package: *
-# Pin: release a=xenial-backports
-# Pin-Priority: 500
-# EOF
-#     cat > /etc/apt/sources.list.d/debhelper10.list <<EOF
-# deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main universe multiverse
-# EOF
-#     apt-get update && apt-get -y dist-upgrade
-# }
+function en10 {
+    echo "deb [trusted=yes] file:/debhelper/10 ./" >> /etc/apt/sources.list.d/debhelper10.list
+    apt-get update && apt-get -qq dist-upgrade
+}
 
 function en11 {
     # apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5EDB1B62EC4926EA

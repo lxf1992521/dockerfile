@@ -1,0 +1,884 @@
+Package: binutils
+Version: 2.34-6ubuntu1.9
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 108
+Depends: binutils-common (= 2.34-6ubuntu1.9), libbinutils (= 2.34-6ubuntu1.9), binutils-x86-64-linux-gnu (= 2.34-6ubuntu1.9)
+Suggests: binutils-doc (>= 2.34-6ubuntu1.9)
+Conflicts: binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3), binutils-multiarch (<< 2.27-8), modutils (<< 2.4.19-1)
+Provides: binutils-gold, elf-binutils
+Filename: ./binutils_2.34-6ubuntu1.9_amd64.deb
+Size: 3380
+MD5sum: 9144c4f0fe069cf3530cf87ff6d54b4d
+SHA1: 5ea13ea31a52f96a8feef47a2cce76040591ee09
+SHA256: 28ef86f91d0543f5cc1b32b7a7e801b8484351dfbb55a45db065a535e7db6abe
+Section: devel
+Priority: optional
+Homepage: https://www.gnu.org/software/binutils/
+Description: GNU assembler, linker and binary utilities
+ The programs in this package are used to assemble, link and manipulate
+ binary and object files.  They may be used in conjunction with a compiler
+ and various libraries to build programs.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: binutils-common
+Source: binutils
+Version: 2.34-6ubuntu1.9
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 424
+Breaks: binutils (<< 2.29.1-3.1~)
+Replaces: binutils (<< 2.29.1-3.1~)
+Filename: ./binutils-common_2.34-6ubuntu1.9_amd64.deb
+Size: 207936
+MD5sum: 942e56ba4ae5d781822e3e12214486fd
+SHA1: 8105cc45e7d7d24c4eaac5917a3bb94ee53efe85
+SHA256: 76a1637d771b255ff0b751bb37d2c7fe1822f481397729f78148ce0014b0e9c0
+Section: devel
+Priority: optional
+Multi-Arch: same
+Homepage: https://www.gnu.org/software/binutils/
+Description: Common files for the GNU assembler, linker and binary utilities
+ This package contains the localization files used by binutils packages for
+ various target architectures and parts of the binutils documentation. It is
+ not useful on its own.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: binutils-x86-64-linux-gnu
+Source: binutils
+Version: 2.34-6ubuntu1.9
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 9848
+Depends: binutils-common (= 2.34-6ubuntu1.9), libbinutils (= 2.34-6ubuntu1.9), libc6 (>= 2.27), libctf-nobfd0 (>= 2.33.50), libctf0 (>= 2.33.50), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
+Suggests: binutils-doc (= 2.34-6ubuntu1.9)
+Breaks: binutils (<< 2.29-6)
+Replaces: binutils (<< 2.29-6)
+Filename: ./binutils-x86-64-linux-gnu_2.34-6ubuntu1.9_amd64.deb
+Size: 1613596
+MD5sum: cea0653dcd14b40c97dde7b11df5cd46
+SHA1: 8da0e000bc5d5df28c5d62a78a82e6b5325081de
+SHA256: 7965703d10b82163251cef98999b607efa94321ce5923fcff0a4d5d937df914c
+Section: devel
+Priority: optional
+Multi-Arch: allowed
+Homepage: https://www.gnu.org/software/binutils/
+Description: GNU binary utilities, for x86-64-linux-gnu target
+ This package provides GNU assembler, linker and binary utilities
+ for the x86-64-linux-gnu target.
+ .
+ You don't need this package unless you plan to cross-compile programs
+ for x86-64-linux-gnu and x86-64-linux-gnu is not your native platform.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: cpp
+Source: gcc-defaults (1.185.1ubuntu2)
+Version: 4:9.3.0-1ubuntu2
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 64
+Depends: cpp-9 (>= 9.3.0-3~)
+Suggests: cpp-doc
+Conflicts: cpp-doc (<< 1:2.95.3)
+Filename: ./cpp_9.3.0-1ubuntu2_amd64.deb
+Size: 27588
+MD5sum: 4998ce4c28f43d1ab62ae6b7372893a4
+SHA1: 1c18fb49ae90777bba93ba40d4d8cfda3e6f5662
+SHA256: 6a29410b6f9a6f1f6b3fe93d0b994e56293126962950bb1c9bbf0a8909044b03
+Section: interpreters
+Priority: optional
+Multi-Arch: allowed
+Description: GNU C preprocessor (cpp)
+ The GNU C preprocessor is a macro processor that is used automatically
+ by the GNU C compiler to transform programs before actual compilation.
+ .
+ This package has been separated from gcc for the benefit of those who
+ require the preprocessor but not the compiler.
+ .
+ This is a dependency package providing the default GNU C preprocessor.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: cpp-9
+Source: gcc-9
+Version: 9.4.0-1ubuntu1~20.04.2
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 26238
+Depends: gcc-9-base (= 9.4.0-1ubuntu1~20.04.2), libc6 (>= 2.14), libgmp10 (>= 2:5.0.1~), libisl22 (>= 0.15), libmpc3, libmpfr6 (>= 3.1.3), zlib1g (>= 1:1.1.4)
+Suggests: gcc-9-locales (>= 8)
+Breaks: hardening-wrapper (<< 2.8+nmu3), libmagics++-dev (<< 2.28.0-4)
+Filename: ./cpp-9_9.4.0-1ubuntu1~20.04.2_amd64.deb
+Size: 7501620
+MD5sum: 1f5297c091f993d9b6f31a6bab9c8a65
+SHA1: 7d1208dbf59178659e1aa6079fa5852b9b3b2707
+SHA256: ed10bd0ab893389c21622d01415991466e5b20a0c57732308884180ec1f0a6e8
+Section: interpreters
+Priority: optional
+Homepage: http://gcc.gnu.org/
+Description: GNU C preprocessor
+ A macro processor that is used automatically by the GNU C compiler
+ to transform programs before actual compilation.
+ .
+ This package has been separated from gcc for the benefit of those who
+ require the preprocessor but not the compiler.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: g++
+Source: gcc-defaults (1.185.1ubuntu2)
+Version: 4:9.3.0-1ubuntu2
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 16
+Depends: cpp (= 4:9.3.0-1ubuntu2), gcc (= 4:9.3.0-1ubuntu2), g++-9 (>= 9.3.0-3~), gcc-9 (>= 9.3.0-3~)
+Suggests: g++-multilib
+Provides: c++-compiler, g++-x86-64-linux-gnu (= 4:9.3.0-1ubuntu2)
+Filename: ./g++_9.3.0-1ubuntu2_amd64.deb
+Size: 1604
+MD5sum: a71faf81074613648ba94677fc2b67f3
+SHA1: a75a2f9d5e35da11428145410b1e5fb1dac4c2c6
+SHA256: c613719f24d30e87ed196f27a324a6820032675759330772a1e6620c7662840e
+Section: devel
+Priority: optional
+Description: GNU C++ compiler
+ This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+ .
+ This is a dependency package providing the default GNU C++ compiler.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: g++-9
+Source: gcc-9
+Version: 9.4.0-1ubuntu1~20.04.2
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 28016
+Depends: gcc-9-base (= 9.4.0-1ubuntu1~20.04.2), gcc-9 (= 9.4.0-1ubuntu1~20.04.2), libstdc++-9-dev (= 9.4.0-1ubuntu1~20.04.2), libc6 (>= 2.14), libgmp10 (>= 2:5.0.1~), libisl22 (>= 0.15), libmpc3, libmpfr6 (>= 3.1.3), zlib1g (>= 1:1.1.4)
+Suggests: g++-9-multilib, gcc-9-doc (>= 8)
+Provides: c++-compiler, c++abi2-dev
+Filename: ./g++-9_9.4.0-1ubuntu1~20.04.2_amd64.deb
+Size: 8421356
+MD5sum: 939c2ee6716748b8f80ea708c72c23af
+SHA1: d5173ddaedbf7b5d76f1f731bb10a17d6c1745a3
+SHA256: 2c617ef6d7e1809ded44e5a6d0ea2410ec4ec793765b91e892b6acc9a12ddb3c
+Section: devel
+Priority: optional
+Homepage: http://gcc.gnu.org/
+Description: GNU C++ compiler
+ This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: gcc
+Source: gcc-defaults (1.185.1ubuntu2)
+Version: 4:9.3.0-1ubuntu2
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 50
+Depends: cpp (= 4:9.3.0-1ubuntu2), gcc-9 (>= 9.3.0-3~)
+Recommends: libc6-dev | libc-dev
+Suggests: gcc-multilib, make, manpages-dev, autoconf, automake, libtool, flex, bison, gdb, gcc-doc
+Conflicts: gcc-doc (<< 1:2.95.3)
+Provides: c-compiler, gcc-x86-64-linux-gnu (= 4:9.3.0-1ubuntu2)
+Filename: ./gcc_9.3.0-1ubuntu2_amd64.deb
+Size: 5208
+MD5sum: c8434d667d10beb0f15ae2e175ead386
+SHA1: ac589aa5799c3705383a16679fd9e968bcc6385e
+SHA256: 78ab6a8841c68300ba39992e8e33190371e133b3592c601ed3052d54e2ba59ea
+Section: devel
+Priority: optional
+Description: GNU C compiler
+ This is the GNU C compiler, a fairly portable optimizing compiler for C.
+ .
+ This is a dependency package providing the default GNU C compiler.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: gcc-10-base
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 271
+Breaks: gnat (<< 7)
+Filename: ./gcc-10-base_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 20776
+MD5sum: 479a01366c42a6bafadcbb0c6da26000
+SHA1: 1312fcc20f83fdcc419827eaf360b68ea13c19ff
+SHA256: 8fac06791057b1bba6178466e160bb3ec2a795297f10e88e34daf762572ed5c0
+Section: libs
+Priority: required
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: GCC, the GNU Compiler Collection (base package)
+ This package contains files common to all languages and libraries
+ contained in the GNU Compiler Collection (GCC).
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: gcc-9
+Version: 9.4.0-1ubuntu1~20.04.2
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 29840
+Depends: cpp-9 (= 9.4.0-1ubuntu1~20.04.2), gcc-9-base (= 9.4.0-1ubuntu1~20.04.2), libcc1-0 (>= 9.4.0-1ubuntu1~20.04.2), binutils (>= 2.34), libgcc-9-dev (= 9.4.0-1ubuntu1~20.04.2), libc6 (>= 2.15), libgcc-s1 (>= 3.0), libgmp10 (>= 2:5.0.1~), libisl22 (>= 0.15), libmpc3, libmpfr6 (>= 3.1.3), libstdc++6 (>= 5), zlib1g (>= 1:1.1.4)
+Recommends: libc6-dev (>= 2.13-0ubuntu6)
+Suggests: gcc-9-multilib, gcc-9-doc (>= 8), gcc-9-locales (>= 8)
+Replaces: cpp-9 (<< 7.1.1-8)
+Provides: c-compiler
+Filename: ./gcc-9_9.4.0-1ubuntu1~20.04.2_amd64.deb
+Size: 8275648
+MD5sum: 0bdd61dd7384d93c7b75a5a1f65830c1
+SHA1: 947c513038218626fcaf4838d546eb6c67752614
+SHA256: 7b6f2e5aa58695b30a5e4d8e1c1e4f39bf5f7b28fc5db1609385e0630eac8c18
+Section: devel
+Priority: optional
+Homepage: http://gcc.gnu.org/
+Description: GNU C compiler
+ This is the GNU C compiler, a fairly portable optimizing compiler for C.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: gcc-9-base
+Source: gcc-9
+Version: 9.4.0-1ubuntu1~20.04.2
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 265
+Breaks: gnat (<< 7)
+Filename: ./gcc-9-base_9.4.0-1ubuntu1~20.04.2_amd64.deb
+Size: 18896
+MD5sum: 4d4ab51e1deaa9afa2fef20f036fb1d1
+SHA1: 52f037fd94591ee37242b5447f9a83168b28e216
+SHA256: 7fb8300b83b99d2b65d8ccbf69119829789bc4204c450eb94cc6f666e3b4254e
+Section: libs
+Priority: required
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: GCC, the GNU Compiler Collection (base package)
+ This package contains files common to all languages and libraries
+ contained in the GNU Compiler Collection (GCC).
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libasan5
+Source: gcc-9
+Version: 9.4.0-1ubuntu1~20.04.2
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 14965
+Depends: gcc-9-base (= 9.4.0-1ubuntu1~20.04.2), libc6 (>= 2.23), libgcc-s1
+Filename: ./libasan5_9.4.0-1ubuntu1~20.04.2_amd64.deb
+Size: 2752248
+MD5sum: ba00937ca9353ce986f214894ceb8683
+SHA1: 664fc0ffd508e3a8bedd0332ed6eeee7fc80dd46
+SHA256: 726990d770038654113040ea5234f27042ef4d61974181b1728c02b15daf9050
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: AddressSanitizer -- a fast memory error detector
+ AddressSanitizer (ASan) is a fast memory error detector.  It finds
+ use-after-free and {heap,stack,global}-buffer overflow bugs in C/C++ programs.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libatomic1
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 45
+Depends: gcc-10-base (= 10.5.0-1ubuntu1~20.04), libc6 (>= 2.14)
+Filename: ./libatomic1_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 9284
+MD5sum: 8945b00d87c55e6f10917100441d05b9
+SHA1: 3f1b40622c5784231bc721e51fd435ff0e4a7ecf
+SHA256: 29b19adba1cb79b0cbf905ee21cc68d3a88eadcd56c39d1a0b29c5a523b60557
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: support library providing __atomic built-in functions
+ library providing __atomic built-in functions. When an atomic call cannot
+ be turned into lock-free instructions, GCC will make calls into this library.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libbinutils
+Source: binutils
+Version: 2.34-6ubuntu1.9
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 2696
+Depends: libc6 (>= 2.14), zlib1g (>= 1:1.2.0), binutils-common (= 2.34-6ubuntu1.9)
+Breaks: binutils (<< 2.29-6)
+Replaces: binutils (<< 2.29-6)
+Filename: ./libbinutils_2.34-6ubuntu1.9_amd64.deb
+Size: 474932
+MD5sum: 4a9a996441a457f66d79b219752af63d
+SHA1: 94204bbf9ac8895fce457339b8e72c54e079b042
+SHA256: 2fa1ee465c76f28b42526848ee37b045af43e741f9709c6280683429238d2f34
+Section: devel
+Priority: optional
+Multi-Arch: same
+Homepage: https://www.gnu.org/software/binutils/
+Description: GNU binary utilities (private shared library)
+ This package includes the private shared libraries libbfd and libopcodes.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: libc-bin
+Source: glibc
+Version: 2.31-0ubuntu9.15
+Architecture: amd64
+Essential: yes
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 3714
+Depends: libc6 (>> 2.31), libc6 (<< 2.32)
+Suggests: manpages
+Filename: ./libc-bin_2.31-0ubuntu9.15_amd64.deb
+Size: 634444
+MD5sum: d87af27df564f0edc926ea57df4352aa
+SHA1: 110e1c420e317430df540e8e6d31d58c48d7380b
+SHA256: ea679a81fe0da5a3bba3e330f68cb5a0f4f34f51519983f3b2c9fb9ff0da3af2
+Section: libs
+Priority: required
+Multi-Arch: foreign
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description: GNU C Library: Binaries
+ This package contains utility programs related to the GNU C Library.
+ .
+  * catchsegv: catch segmentation faults in programs
+  * getconf: query system configuration variables
+  * getent: get entries from administrative databases
+  * iconv, iconvconfig: convert between character encodings
+  * ldd, ldconfig: print/configure shared library dependencies
+  * locale, localedef: show/generate locale definitions
+  * tzselect, zdump, zic: select/dump/compile time zones
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Original-Vcs-Browser: https://salsa.debian.org/glibc-team/glibc
+Original-Vcs-Git: https://salsa.debian.org/glibc-team/glibc.git
+
+Package: libc-dev-bin
+Source: glibc
+Version: 2.31-0ubuntu9.15
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 443
+Depends: libc6 (>> 2.31), libc6 (<< 2.32)
+Recommends: manpages, manpages-dev
+Filename: ./libc-dev-bin_2.31-0ubuntu9.15_amd64.deb
+Size: 71760
+MD5sum: 45046ef1b65f09eb887219378390aa85
+SHA1: 349d829581c9436be51e319ce6cbd8e64b3fc2e5
+SHA256: cdb258fdbbb538d96001e3a15947a6e548c03847f18b7512c99d1f5b40fee9bf
+Section: libdevel
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description: GNU C Library: Development binaries
+ This package contains utility programs related to the GNU C Library
+ development package.
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Original-Vcs-Browser: https://salsa.debian.org/glibc-team/glibc
+Original-Vcs-Git: https://salsa.debian.org/glibc-team/glibc.git
+
+Package: libc6
+Source: glibc
+Version: 2.31-0ubuntu9.15
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 13239
+Depends: libgcc-s1, libcrypt1 (>= 1:4.4.10-10ubuntu4)
+Recommends: libidn2-0 (>= 2.0.5~)
+Suggests: glibc-doc, debconf | debconf-2.0, locales
+Conflicts: openrc (<< 0.27-2~)
+Breaks: hurd (<< 1:0.9.git20170910-1), iraf-fitsutil (<< 2018.07.06-4), libtirpc1 (<< 0.2.3), locales (<< 2.31), locales-all (<< 2.31), nocache (<< 1.1-1~), nscd (<< 2.31), r-cran-later (<< 0.7.5+dfsg-2), wcc (<< 0.0.2+dfsg-3)
+Replaces: libc6-amd64
+Filename: ./libc6_2.31-0ubuntu9.15_amd64.deb
+Size: 2722900
+MD5sum: 13750cd91657e3c260c18f6455ebefef
+SHA1: 5688f2e2d4c5aee0051254be72d0efb5a1598f1f
+SHA256: e6d80159ddd882159cb7c24ea4b47d8c579d0374e82b1910b6163da3d86b3619
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description: GNU C Library: Shared libraries
+ Contains the standard libraries that are used by nearly all programs on
+ the system. This package includes shared versions of the standard C library
+ and the standard math library, as well as many others.
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Original-Vcs-Browser: https://salsa.debian.org/glibc-team/glibc
+Original-Vcs-Git: https://salsa.debian.org/glibc-team/glibc.git
+
+Package: libc6-dev
+Source: glibc
+Version: 2.31-0ubuntu9.15
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 19081
+Depends: libc6 (= 2.31-0ubuntu9.15), libc-dev-bin (= 2.31-0ubuntu9.15), linux-libc-dev, libcrypt-dev
+Suggests: glibc-doc, manpages-dev
+Conflicts: libc0.1-dev, libc0.3-dev, libc6.1-dev
+Breaks: binutils (<< 2.26), binutils-gold (<< 2.20.1-11), cmake (<< 2.8.4+dfsg.1-5), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2), gcc-4.6 (<< 4.6.0-12), libhwloc-dev (<< 1.2-3), libjna-java (<< 3.2.7-4), liblouis-dev (<< 2.3.0-2), liblouisxml-dev (<< 2.4.0-2), libperl5.26 (<< 5.26.1-3), make (<< 3.81-8.1), pkg-config (<< 0.26-1)
+Provides: libc-dev
+Filename: ./libc6-dev_2.31-0ubuntu9.15_amd64.deb
+Size: 2519220
+MD5sum: 3f3e78a3fcfe05e962d367ce88fe1479
+SHA1: 6c7b58c47fbdbe421ec65422d04bfc4a12393783
+SHA256: caba1d700c3e5985c0831d704a0da68722aca92b9cdf15a0091d7a2a8b2dcd04
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description: GNU C Library: Development Libraries and Header Files
+ Contains the symlinks, headers, and object files needed to compile
+ and link programs which use the standard C library.
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Original-Vcs-Browser: https://salsa.debian.org/glibc-team/glibc
+Original-Vcs-Git: https://salsa.debian.org/glibc-team/glibc.git
+
+Package: libcc1-0
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 156
+Depends: gcc-10-base (= 10.5.0-1ubuntu1~20.04), libc6 (>= 2.15), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Filename: ./libcc1-0_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 48832
+MD5sum: 470f48325c68b6e1c2e93c3f067c0d94
+SHA1: dbcd774417edb4a312faf1a2a6bff8562435ab64
+SHA256: b9b31f671eb35a20235b4478f232c2939a41737d12660b3b38e340b82a25a9b3
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: GCC cc1 plugin for GDB
+ libcc1 is a plugin for GDB.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libcrypt-dev
+Source: libxcrypt
+Version: 1:4.4.10-10ubuntu4
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 321
+Depends: libcrypt1 (= 1:4.4.10-10ubuntu4)
+Conflicts: libcrypt1-dev, libcrypt2-dev
+Breaks: libc6-dev (<< 2.31), manpages-dev (<< 5.01-1)
+Replaces: libc6-dev (<< 2.31), libcrypt1-dev, libcrypt2-dev, manpages-dev (<< 5.01-1)
+Provides: libcrypt1-dev
+Filename: ./libcrypt-dev_4.4.10-10ubuntu4_amd64.deb
+Size: 104104
+MD5sum: 8793f32f562b4fa2bd57f51de6a1a74e
+SHA1: 5572ad87cb46df76b8c6ddd1885192ebff1c5f63
+SHA256: f0a41d8e8cf379dbbdfc43169f34851ed452b3581e72c6654f2e290caf4e1b20
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Description: libcrypt development files
+ This package contains the files needed for developing applications that
+ use libcrypt.
+Original-Maintainer: Marco d'Itri <md@linux.it>
+
+Package: libcrypt1
+Source: libxcrypt
+Version: 1:4.4.10-10ubuntu4
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 226
+Depends: libc6 (>= 2.25)
+Breaks: libc6 (<< 2.31)
+Replaces: libc6 (<< 2.31)
+Filename: ./libcrypt1_4.4.10-10ubuntu4_amd64.deb
+Size: 78204
+MD5sum: 7c69e5240c0782a3025f5b821b6b833b
+SHA1: 92245daae4e797ead6caee3a75164beb0527048d
+SHA256: 231b4dbbe5865775f118cfa61394f1e16fa7102b6953a327e672499a20876d73
+Section: libs
+Priority: optional
+Multi-Arch: same
+Description: libcrypt shared library
+ libxcrypt is a modern library for one-way hashing of passwords.
+ It supports DES, MD5, NTHASH, SUNMD5, SHA-2-256, SHA-2-512, and
+ bcrypt-based password hashes
+ It provides the traditional Unix 'crypt' and 'crypt_r' interfaces,
+ as well as a set of extended interfaces like 'crypt_gensalt'.
+Original-Maintainer: Marco d'Itri <md@linux.it>
+
+Package: libctf-nobfd0
+Source: binutils
+Version: 2.34-6ubuntu1.9
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 198
+Depends: libc6 (>= 2.14), zlib1g (>= 1:1.2.0)
+Filename: ./libctf-nobfd0_2.34-6ubuntu1.9_amd64.deb
+Size: 48248
+MD5sum: c0e95fb6c0b740df24ac8a2e97a7bd05
+SHA1: df26b91de237a25f1a3f9bf0995ef3cc82c8f4f7
+SHA256: 0c037aa9665e55fcd7ceea80423a3fab1d1d6f66e5f7d6a4f8199ab1f8823d14
+Section: devel
+Priority: optional
+Multi-Arch: same
+Homepage: https://www.gnu.org/software/binutils/
+Description: Compact C Type Format library (runtime, no BFD dependency)
+ This package includes the libctf-nobfd shared library.  The Compact C Type
+ Format (CTF) is a way of representing information about a binary program
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: libctf0
+Source: binutils
+Version: 2.34-6ubuntu1.9
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 130
+Depends: libbinutils (= 2.34-6ubuntu1.9), libc6 (>= 2.14), zlib1g (>= 1:1.2.0)
+Filename: ./libctf0_2.34-6ubuntu1.9_amd64.deb
+Size: 46620
+MD5sum: 63a690dca2b3b77ecd022239af203e48
+SHA1: 27e72d53aac856d8c9b832e70bdc307502982386
+SHA256: da22c6457c3574ec8ea1624d0dbc2d67d4c73a5850c601cf64e0fd73b23dbfa9
+Section: devel
+Priority: optional
+Multi-Arch: same
+Homepage: https://www.gnu.org/software/binutils/
+Description: Compact C Type Format library (runtime, BFD dependency)
+ This package includes the libctf-nobfd shared library.  The Compact C Type
+ Format (CTF) is a way of representing information about a binary program
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: libgcc-9-dev
+Source: gcc-9
+Version: 9.4.0-1ubuntu1~20.04.2
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 13887
+Depends: gcc-9-base (= 9.4.0-1ubuntu1~20.04.2), libgcc-s1 (>= 9.4.0-1ubuntu1~20.04.2), libgomp1 (>= 9.4.0-1ubuntu1~20.04.2), libitm1 (>= 9.4.0-1ubuntu1~20.04.2), libatomic1 (>= 9.4.0-1ubuntu1~20.04.2), libasan5 (>= 9.4.0-1ubuntu1~20.04.2), liblsan0 (>= 9.4.0-1ubuntu1~20.04.2), libtsan0 (>= 9.4.0-1ubuntu1~20.04.2), libubsan1 (>= 9.4.0-1ubuntu1~20.04.2), libquadmath0 (>= 9.4.0-1ubuntu1~20.04.2)
+Recommends: libc6-dev (>= 2.13-0ubuntu6)
+Breaks: libgccjit-9-dev (<< 9.3.0-6)
+Replaces: libgccjit-9-dev (<< 9.3.0-6)
+Filename: ./libgcc-9-dev_9.4.0-1ubuntu1~20.04.2_amd64.deb
+Size: 2359460
+MD5sum: 80df154bf3b19f472308dd36c2600179
+SHA1: f91d6cc16ec906e400740169756db3196db0ab97
+SHA256: f21b9daeefa0712b6c6f035face86f5ae9cef5079ae61570b84ebda0352db77e
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: GCC support library (development files)
+ This package contains the headers and static library files necessary for
+ building C programs which use libgcc, libgomp, libquadmath, libssp or libitm.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libgcc-s1
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 120
+Depends: gcc-10-base (= 10.5.0-1ubuntu1~20.04), libc6 (>= 2.14)
+Breaks: cryptsetup-initramfs (<< 2:2.2.2-3~)
+Replaces: libgcc1 (<< 1:10)
+Provides: libgcc1 (= 1:10.5.0-1ubuntu1~20.04)
+Filename: ./libgcc-s1_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 41824
+MD5sum: 848f026db8d881fe36e7e4a200b0bc56
+SHA1: b444adc4179e7de7d205ebc47d8f03e086163434
+SHA256: 4aa7b9c9f3225df65a750ae0ff5c890fc6108c82a609b3c5abd45d211838bf3c
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: GCC support library
+ Shared version of the support library, a library of internal subroutines
+ that GCC uses to overcome shortcomings of particular machines, or
+ special needs for some languages.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libgomp1
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 286
+Depends: gcc-10-base (= 10.5.0-1ubuntu1~20.04), libc6 (>= 2.17)
+Breaks: gcc-4.3 (<< 4.3.6-1), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2)
+Filename: ./libgomp1_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 101900
+MD5sum: 27978448f7f62f893d09a981fea33778
+SHA1: 78c2d2a308c03351c973996c8365032ec571d072
+SHA256: 1748606410f62d406588ff7c84ec6e0664cca48d7ecac0b539fecd51ac2219bd
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: GCC OpenMP (GOMP) support library
+ GOMP is an implementation of OpenMP for the C, C++, and Fortran compilers
+ in the GNU Compiler Collection.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libisl22
+Source: isl
+Version: 0.22.1-1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 1926
+Depends: libc6 (>= 2.14), libgmp10
+Breaks: libisl-dbg (<< 0.19)
+Replaces: libisl-dbg (<< 0.19)
+Filename: ./libisl22_0.22.1-1_amd64.deb
+Size: 591960
+MD5sum: 1a23835677b853421e306d5d5ee4a09a
+SHA1: c5ecabbc90afc3b2fc5d7a2bd607cfdb7390a6e8
+SHA256: 67cadab06a50a29cde11c1c1d02847afbae6f0465686481c9106577777b88a44
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://isl.gforge.inria.fr/
+Description: manipulating sets and relations of integer points bounded by linear constraints
+ isl is a library for manipulating sets and relations of integer points
+ bounded by linear constraints. Supported operations on sets include
+ intersection, union, set difference, emptiness check, convex hull,
+ (integer) affine hull, integer projection, and computing the lexicographic
+ minimum using parametric integer programming. It also includes an ILP solver
+ based on generalized basis reduction.
+ .
+ This package contains the runtime library.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libitm1
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 115
+Depends: gcc-10-base (= 10.5.0-1ubuntu1~20.04), libc6 (>= 2.14)
+Filename: ./libitm1_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 26196
+MD5sum: 7e8d96f375045902ca74f6a918c9ee54
+SHA1: b4ad294dc9fc4d3b6f35646b5a55b2dcf18df21a
+SHA256: e2a4eb079a4df5e29bb07943f54837e706b4c055dd2eab8fed82f51e5006b8d1
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: GNU Transactional Memory Library
+ GNU Transactional Memory Library (libitm) provides transaction support for
+ accesses to the memory of a process, enabling easy-to-use synchronization of
+ accesses to shared memory by several threads.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: liblsan0
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 3222
+Depends: gcc-10-base (= 10.5.0-1ubuntu1~20.04), libc6 (>= 2.17), libgcc-s1 (>= 3.3)
+Filename: ./liblsan0_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 834856
+MD5sum: 67d1afa183d4285d483549e96494c3aa
+SHA1: cb7570f185a4e16c8c3bdbd1e8f73982f8fbeae2
+SHA256: b37c51fc350be9b657147b87be40f9da2e019ba9c1083c4726666b941f969ccb
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: LeakSanitizer -- a memory leak detector (runtime)
+ LeakSanitizer (Lsan) is a memory leak detector which is integrated
+ into AddressSanitizer.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libmpc3
+Source: mpclib3
+Version: 1.1.0-1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 110
+Depends: libc6 (>= 2.4), libgmp10, libmpfr6 (>= 4.0.0)
+Filename: ./libmpc3_1.1.0-1_amd64.deb
+Size: 40784
+MD5sum: 904f40b9d70151d42df9b826986a24d8
+SHA1: 9f83a5274f9ae89eee2b9e977dcbf368904a9ba9
+SHA256: 3c3c45aa50ce1ff753107766c6fea35a82c52ad11afcab0abfd0cd0c76730f87
+Section: libs
+Priority: extra
+Multi-Arch: same
+Homepage: http://www.multiprecision.org/mpc/
+Description: multiple precision complex floating-point library
+ MPC is a portable library written in C for arbitrary precision
+ arithmetic on complex numbers providing correct rounding. For the time
+ being, it contains all arithmetic operations over complex numbers, the
+ exponential and the logarithm functions, the trigonometric and
+ hyperbolic functions.
+ .
+ Ultimately, it should implement a multiprecision equivalent of the ISO
+ C99 standard.
+ .
+ It builds upon the GNU MP and the MPFR libraries.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libmpfr6
+Source: mpfr4
+Version: 4.0.2-1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 1096
+Depends: libc6 (>= 2.14), libgmp10
+Breaks: libgmp3 (<< 4.1.4-3), libmpc3 (<< 1.1.0-1~)
+Filename: ./libmpfr6_4.0.2-1_amd64.deb
+Size: 240292
+MD5sum: 9e91ab64ac113ea6c06d45d5ffe09fc6
+SHA1: dec05d4a292b652692c78741ada82e3f47d8e210
+SHA256: d098b67c3e1492a1c21a6a0d9befc88344e59a0d0eb6109384f85d8524a608cb
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://www.mpfr.org/
+Description: multiple precision floating-point computation
+ MPFR provides a library for multiple-precision floating-point computation
+ with correct rounding.  The computation is both efficient and has a
+ well-defined semantics. It copies the good ideas from the
+ ANSI/IEEE-754 standard for double-precision floating-point arithmetic
+ (53-bit mantissa).
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libquadmath0
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 304
+Depends: gcc-10-base (= 10.5.0-1ubuntu1~20.04), libc6 (>= 2.23)
+Filename: ./libquadmath0_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 146072
+MD5sum: 7fff829116b52dc0d417ac730bf42483
+SHA1: 83cfe86c35589cfd9a7660d88c5d5a744d23cdce
+SHA256: f1ea3152a72eee554f71e07a2e7118898a7516eee7fd2c6b24c4b157a9271ba6
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: GCC Quad-Precision Math Library
+ A library, which provides quad-precision mathematical functions on targets
+ supporting the __float128 datatype. The library is used to provide on such
+ targets the REAL(16) type in the GNU Fortran compiler.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libstdc++-9-dev
+Source: gcc-9
+Version: 9.4.0-1ubuntu1~20.04.2
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 17645
+Depends: gcc-9-base (= 9.4.0-1ubuntu1~20.04.2), libgcc-9-dev (= 9.4.0-1ubuntu1~20.04.2), libstdc++6 (>= 9.4.0-1ubuntu1~20.04.2), libc6-dev (>= 2.13-0ubuntu6)
+Suggests: libstdc++-9-doc
+Conflicts: libg++2.8-dev, libg++27-dev, libg++272-dev (<< 2.7.2.8-1), libstdc++2.10-dev (<< 1:2.95.3-2), libstdc++2.8-dev, libstdc++2.9-dev, libstdc++2.9-glibc2.1-dev, libstdc++3.0-dev
+Provides: libstdc++-dev
+Filename: ./libstdc++-9-dev_9.4.0-1ubuntu1~20.04.2_amd64.deb
+Size: 1722156
+MD5sum: 89724ddd5690467d450b637b86eb49ba
+SHA1: bdcd6f04a2aa08f5b61882b15267c88bdd402efe
+SHA256: e8c637e8f5a87f05b3f1dad0e020cc3763c384f5bb0fc159f69277645a2444df
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: GNU Standard C++ Library v3 (development files)
+ This package contains the headers and static library files necessary for
+ building C++ programs which use libstdc++.
+ .
+ libstdc++-v3 is a complete rewrite from the previous libstdc++-v2, which
+ was included up to g++-2.95. The first version of libstdc++-v3 appeared
+ in g++-3.0.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libstdc++6
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 2440
+Depends: gcc-10-base (= 10.5.0-1ubuntu1~20.04), libc6 (>= 2.23), libgcc-s1 (>= 4.2)
+Conflicts: scim (<< 1.4.2-1)
+Breaks: gcc-4.3 (<< 4.3.6-1), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2)
+Replaces: libstdc++6-10-dbg (<< 4.9.0-3)
+Filename: ./libstdc++6_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 501136
+MD5sum: cf59e2b854c08ef9fbf3d25f47912dcf
+SHA1: ff44e0710f60922534f8519bf7530e5df4776fb0
+SHA256: 7f9222342d3551d063bf651319ec397c39278eeeb9ab5950ae0e8c28ef0af431
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: GNU Standard C++ Library v3
+ This package contains an additional runtime library for C++ programs
+ built with the GNU compiler.
+ .
+ libstdc++-v3 is a complete rewrite from the previous libstdc++-v2, which
+ was included up to g++-2.95. The first version of libstdc++-v3 appeared
+ in g++-3.0.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libtsan0
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 9012
+Depends: gcc-10-base (= 10.5.0-1ubuntu1~20.04), libc6 (>= 2.23), libgcc-s1 (>= 3.3)
+Filename: ./libtsan0_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 2016388
+MD5sum: 4af6d427f275d372d609886b8e61905d
+SHA1: 80eb8923e8e5d634b638912dc02eaad42bbdcac5
+SHA256: beb24444d608f14bb40c36c7e6c100e7fbdf5bff555d32563bd33c2779ebe91a
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: ThreadSanitizer -- a Valgrind-based detector of data races (runtime)
+ ThreadSanitizer (Tsan) is a data race detector for C/C++ programs.
+ The Linux and Mac versions are based on Valgrind.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libubsan1
+Source: gcc-10
+Version: 10.5.0-1ubuntu1~20.04
+Architecture: amd64
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 3015
+Depends: gcc-10-base (= 10.5.0-1ubuntu1~20.04), libc6 (>= 2.17), libgcc-s1 (>= 3.3), libstdc++6 (>= 4.1.1)
+Filename: ./libubsan1_10.5.0-1ubuntu1~20.04_amd64.deb
+Size: 784916
+MD5sum: 43540f24869686591f3f0537c81a19fd
+SHA1: efd4049b3629c03fb16a94f83bcefb5f0dbcadb7
+SHA256: 662e52a5e25bea1e1e5ba55a9a96a37aabec554ae997eb41a893f82e1ce1f0c0
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description: UBSan -- undefined behaviour sanitizer (runtime)
+ UndefinedBehaviorSanitizer can be enabled via -fsanitize=undefined.
+ Various computations will be instrumented to detect undefined behavior
+ at runtime. Available for C and C++.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: linux-libc-dev
+Source: linux
+Version: 5.4.0-177.197
+Architecture: amd64
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 6247
+Conflicts: linux-kernel-headers
+Replaces: linux-kernel-headers
+Provides: aufs-dev, linux-kernel-headers
+Filename: ./linux-libc-dev_5.4.0-177.197_amd64.deb
+Size: 1128048
+MD5sum: 59e6a76a022d2ad06b053fbe84b80b7a
+SHA1: 1c22b30b232ff0eea86781e18ce8524c2548ac58
+SHA256: 8bab42455bf5dd043ab3178eec6824b4de776da0424ef2222bbf9422606031d8
+Section: devel
+Priority: optional
+Multi-Arch: same
+Description: Linux Kernel Headers for development
+ This package provides headers from the Linux kernel.  These headers
+ are used by the installed headers for GNU glibc and other system
+ libraries. They are NOT meant to be used to build third-party modules for
+ your kernel. Use linux-headers-* packages for that.
+

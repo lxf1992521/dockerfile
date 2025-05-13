@@ -1,0 +1,29 @@
+# docker build -t lxf1992521/systemd:centos --no-cache --force-rm --network=host - < centos.systemd
+#
+# docker run --rm -it --network=host --tmpfs /run -v /sys/fs/cgroup:/sys/fs/cgroup:ro --name systemd lxf1992521/systemd:centos
+
+FROM centos:7.9.2009
+
+ENV container docker
+STOPSIGNAL SIGRTMIN+3
+RUN sed -e 's|^mirrorlist=|#mirrorlist=|' \
+        -e 's|^#baseurl=|baseurl=|' \
+        -e 's|mirror.centos.org|mirrors.huaweicloud.com|' \
+        -i /etc/yum.repos.d/CentOS-Base.repo; \
+    yum install -q -y systemd systemd-libs systemd-sysv > /dev/null; \
+      (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \
+      systemd-tmpfiles-setup.service ] || rm -f $i; done); \
+      rm -f /lib/systemd/system/multi-user.target.wants/*; \
+      rm -f /etc/systemd/system/*.wants/*; \
+      rm -f /lib/systemd/system/local-fs.target.wants/*; \
+      rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
+      rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
+      rm -f /lib/systemd/system/basic.target.wants/*; \
+      rm -f /lib/systemd/system/anaconda.target.wants/*; \
+      rm -f /lib/systemd/system/systemd-update-utmp*; \
+      rm -rf /var/log/journal; \
+      echo RuntimeMaxUse=100M >> /etc/systemd/journald.conf; \
+    yum clean all; \
+    find /run /tmp /var/tmp /var/cache/yum -mindepth 1 -delete
+
+CMD ["/usr/sbin/init"]

@@ -1,0 +1,190 @@
+Package: libperl-dev
+Source: perl
+Version: 5.24.1-2ubuntu1.1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 15029
+Depends: perl:any (= 5.24.1-2ubuntu1.1), libperl5.24 (= 5.24.1-2ubuntu1.1), libc6-dev | libc-dev
+Filename: ./libperl-dev_5.24.1-2ubuntu1.1_amd64.deb
+Size: 2651854
+MD5sum: 5e7633cf5bfe5127562688c41ee5fd9a
+SHA1: 9dff6cf6c255de26c1e99c2d124d6c7d2b20fe55
+SHA256: f3a1b3bbc11622f60ecc8cb457ef90538f901e34a0a96de58ff2e04815c88ff0
+Section: libdevel
+Priority: optional
+Homepage: http://dev.perl.org/perl5/
+Description: Perl library: development files
+ Files for developing applications which embed a Perl interpreter.
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
+
+Package: libperl5.24
+Source: perl
+Version: 5.24.1-2ubuntu1.1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 20818
+Depends: libbz2-1.0, libc6 (>= 2.23), libdb5.3, libgdbm3 (>= 1.8.3), zlib1g (>= 1:1.2.2.3), perl-modules-5.24 (>= 5.24.1-2ubuntu1.1)
+Breaks: dh-make-perl (<< 0.73-1), ftpmirror (<< 1.96+dfsg-13), libcompress-raw-bzip2-perl (<< 2.069), libcompress-raw-zlib-perl (<< 2.069), libcompress-zlib-perl (<< 2.069.001), libdigest-md5-perl (<< 2.54), libdigest-sha-perl (<< 5.95.01), libencode-perl (<< 2.86), libhtml-template-compiled-perl (<< 0.95-1), libio-compress-base-perl (<< 2.069.001), libio-compress-bzip2-perl (<< 2.069.001), libio-compress-perl (<< 2.069.001), libio-compress-zlib-perl (<< 2.069.001), libload-perl (<< 0.20-1), libmime-base64-perl (<< 3.15), libnet-jifty-perl (<< 0.14-1), libperl-apireference-perl (<< 0.09-1), libregexp-optimizer-perl (<< 0.15-3), libsoap-lite-perl (<< 0.712-4), libstorable-perl (<< 2.56.01), libsys-syslog-perl (<< 0.33.01), libthreads-perl (<< 2.07), libthreads-shared-perl (<< 1.51), libtime-hires-perl (<< 1.9733), libtime-piece-perl (<< 1.31), libxml-parser-lite-tree-perl (<< 0.14-1), libyaml-perl (<< 0.73-1), mrtg (<< 2.16.3-3.1)
+Replaces: libarchive-tar-perl (<= 1.38-2), libcompress-raw-bzip2-perl (<< 2.069), libcompress-raw-zlib-perl (<< 2.069), libcompress-zlib-perl (<< 2.069.001), libdigest-md5-perl (<< 2.54), libdigest-sha-perl (<< 5.95.01), libencode-perl (<< 2.86), libio-compress-base-perl (<< 2.069.001), libio-compress-bzip2-perl (<< 2.069.001), libio-compress-perl (<< 2.069.001), libio-compress-zlib-perl (<< 2.069.001), libmime-base64-perl (<< 3.15), libmodule-corelist-perl (<< 2.14-2), libstorable-perl (<< 2.56.01), libsys-syslog-perl (<< 0.33.01), libthreads-perl (<< 2.07), libthreads-shared-perl (<< 1.51), libtime-hires-perl (<< 1.9733), libtime-piece-perl (<< 1.31), perl (<< 5.22.0~), perl-base (<< 5.22.0~)
+Provides: libcompress-raw-bzip2-perl, libcompress-raw-zlib-perl, libcompress-zlib-perl, libdigest-md5-perl, libdigest-sha-perl, libencode-perl, libio-compress-base-perl, libio-compress-bzip2-perl, libio-compress-perl, libio-compress-zlib-perl, libmime-base64-perl, libstorable-perl, libsys-syslog-perl, libthreads-perl, libthreads-shared-perl, libtime-hires-perl, libtime-piece-perl, perl-cross-config
+Filename: ./libperl5.24_5.24.1-2ubuntu1.1_amd64.deb
+Size: 3504074
+MD5sum: 6a30f36c4e3222a99c4ae89d4d02286b
+SHA1: d411fb65ed03762b9b37ba969bad7d7f1d68912d
+SHA256: f53761380802fd11e812c293a2a99d3104c5bfbae619b87b370ae439efe90b6e
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://dev.perl.org/perl5/
+Description: shared Perl library
+ This package contains the shared Perl library, used by applications
+ which embed a Perl interpreter.
+ .
+ It also contains the architecture-dependent parts of the standard
+ library (and depends on perl-modules-5.24 which contains the
+ architecture-independent parts).
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
+
+Package: perl
+Version: 5.24.1-2ubuntu1.1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 651
+Pre-Depends: dpkg (>= 1.17.17)
+Depends: perl-base (= 5.24.1-2ubuntu1.1), perl-modules-5.24 (>= 5.24.1-2ubuntu1.1), libperl5.24 (= 5.24.1-2ubuntu1.1)
+Recommends: netbase, rename
+Suggests: perl-doc, libterm-readline-gnu-perl | libterm-readline-perl-perl, make
+Conflicts: libjson-pp-perl (<< 2.27200-2)
+Breaks: libperl-dev (<< 5.24.0~), perl-doc (<< 5.24.1-1)
+Replaces: perl-modules (<< 5.22.0~)
+Filename: ./perl_5.24.1-2ubuntu1.1_amd64.deb
+Size: 218492
+MD5sum: 3a5e0078e2985c1c8d72cecce228b66a
+SHA1: 0762698c19ab3988c6828eb12edd1bc2d4a1f8d3
+SHA256: 7f21d975595705ca0499f9982cf5d41950ef99713d2ab60ae8e6991cd1a54813
+Section: perl
+Priority: standard
+Multi-Arch: allowed
+Homepage: http://dev.perl.org/perl5/
+Description: Larry Wall's Practical Extraction and Report Language
+ Perl is a highly capable, feature-rich programming language with over
+ 20 years of development. Perl 5 runs on over 100 platforms from
+ portables to mainframes. Perl is suitable for both rapid prototyping
+ and large scale development projects.
+ .
+ Perl 5 supports many programming styles, including procedural,
+ functional, and object-oriented. In addition to this, it is supported
+ by an ever-growing collection of reusable modules which accelerate
+ development. Some of these modules include Web frameworks, database
+ integration, networking protocols, and encryption. Perl provides
+ interfaces to C and C++ for custom extension development.
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
+
+Package: perl-base
+Source: perl
+Version: 5.24.1-2ubuntu1.1
+Architecture: amd64
+Essential: yes
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 7418
+Pre-Depends: libc6 (>= 2.23), dpkg (>= 1.17.17)
+Suggests: perl
+Conflicts: defoma (<< 0.11.12), doc-base (<< 0.10.3), mono-gac (<< 2.10.8.1-3), safe-rm (<< 0.8), update-inetd (<< 4.41)
+Breaks: amanda-common (<< 1:3.3.9-2), autoconf2.13 (<< 2.13-45), backuppc (<< 3.3.1-2), dh-haskell (<< 0.3), libalien-wxwidgets-perl (<< 0.65+dfsg-2), libanyevent-perl (<< 7.070-2), libcommon-sense-perl (<< 3.72-2~), libexception-class-perl (<< 1.42), libfile-path-perl (<< 2.12.01), libfile-spec-perl (<< 3.6301), libfile-temp-perl (<< 0.2304), libgtk2-perl-doc (<< 2:1.2491-4), libio-socket-ip-perl (<< 0.37), libjcode-perl (<< 2.13-3), libmarc-charset-perl (<< 1.2), libsbuild-perl (<< 0.67.0-1), libscalar-list-utils-perl (<< 1:1.42.02), libsocket-perl (<< 2.020.03), libxsloader-perl (<< 0.22), mailagent (<< 1:3.1-81-2), pdl (<< 1:2.007-4), perl (<< 5.24.1~), perl-modules (<< 5.24.1~), texinfo (<< 6.1.0.dfsg.1-8)
+Replaces: libfile-path-perl (<< 2.12.01), libfile-temp-perl (<< 0.2304), libio-socket-ip-perl (<< 0.37), libscalar-list-utils-perl (<< 1:1.42.02), libsocket-perl (<< 2.020.03), libxsloader-perl (<< 0.22), perl (<< 5.10.1-12), perl-modules (<< 5.20.1-3)
+Provides: libfile-path-perl, libfile-temp-perl, libio-socket-ip-perl, libscalar-list-utils-perl, libsocket-perl, libxsloader-perl, perlapi-5.24.1
+Filename: ./perl-base_5.24.1-2ubuntu1.1_amd64.deb
+Size: 1323260
+MD5sum: 1817858ab471eb76cd7f1a70d1e0709c
+SHA1: 2cc5a136311ab63541e6f0077dfa015952af641e
+SHA256: 209de5d77ee1b609dadf30f976fb156ea8a9c58b8d839ceac88681c45371a168
+Section: perl
+Priority: required
+Homepage: http://dev.perl.org/perl5/
+Description: minimal Perl system
+ Perl is a scripting language used in many system scripts and utilities.
+ .
+ This package provides a Perl interpreter and the small subset of the
+ standard run-time library required to perform basic tasks. For a full
+ Perl installation, install "perl" (and its dependencies, "perl-modules-5.24"
+ and "perl-doc").
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
+
+Package: perl-debug
+Source: perl
+Version: 5.24.1-2ubuntu1.1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 38239
+Depends: perl (= 5.24.1-2ubuntu1.1), libc6 (>= 2.14)
+Filename: ./perl-debug_5.24.1-2ubuntu1.1_amd64.deb
+Size: 6980316
+MD5sum: f73846d6bd1800424abbe4299c2023ec
+SHA1: b157eab3bfeb1e5e15c8d3f44eb5c4f1c6f4916b
+SHA256: e7cd05a021a8445717869f5b4ee2642c6aeda0cd253571b249351457d73f9dff
+Section: devel
+Priority: extra
+Homepage: http://dev.perl.org/perl5/
+Description: debug-enabled Perl interpreter
+ debugperl provides a debug-enabled version of Perl which can produce
+ extensive information about the interpreter as it compiles and executes
+ a program (see the -D switch in perlrun(1)).
+ .
+ Note that this package is primarily of use in debugging *Perl* rather
+ than perl programs, which may be traced/debugged using the standard
+ perl binary using the -d switch (see perldebug(1)).
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
+
+Package: perl-doc
+Source: perl
+Version: 5.24.1-2ubuntu1.1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 13476
+Depends: perl (>= 5.24.1-1)
+Suggests: man-browser, groff-base
+Filename: ./perl-doc_5.24.1-2ubuntu1.1_all.deb
+Size: 7151828
+MD5sum: 68eaf1baacc8d80b0f1890a3b69143f8
+SHA1: b4a8f4ef7c19de492efdeedcb2ab41ced9683be7
+SHA256: 5e5c3ce850348569072d65198f7317a0fa6b3c7eb1ac51adf2fe8efd52cd2339
+Section: doc
+Priority: optional
+Homepage: http://dev.perl.org/perl5/
+Description: Perl documentation
+ Perl manual pages, POD documentation and the `perldoc' program.  If you are
+ writing Perl programs, you almost certainly need this.
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
+
+Package: perl-modules-5.24
+Source: perl
+Version: 5.24.1-2ubuntu1.1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 17625
+Pre-Depends: dpkg (>= 1.17.17)
+Depends: perl-base (>= 5.24.1-1)
+Recommends: perl (>= 5.24.1-1)
+Conflicts: defoma (<< 0.11.12), mono-gac (<< 2.10.8.1-3), perl-modules (<< 5.22.0~)
+Breaks: cli-common (<< 0.9+nmu1), libansicolor-perl (<< 4.04), libarchive-tar-perl (<< 2.04.01), libattribute-handlers-perl (<< 0.99), libautodie-perl (<< 2.29-2), libcpan-meta-perl (<< 2.150005), libcpan-meta-requirements-perl (<< 2.140), libcpan-meta-yaml-perl (<< 0.018), libdigest-perl (<< 1.17.01), libexperimental-perl (<< 0.016), libextutils-cbuilder-perl (<< 0.280225), libextutils-command-perl (<< 7.10.02), libextutils-install-perl (<< 2.04), libextutils-parsexs-perl (<< 3.310000), libfile-spec-perl (<< 3.6301), libhttp-tiny-perl (<< 0.056.001), libi18n-langtags-perl (<< 0.40), libio-zlib-perl (<< 1.10), libjson-pp-perl (<< 2.27300.01), liblocale-codes-perl (<< 3.37), liblocale-maketext-perl (<< 1.26.01), liblocale-maketext-simple-perl (<< 0.21.01), libmath-bigint-perl (<< 1.999715), libmath-complex-perl (<< 1.59), libmodule-corelist-perl (<< 5.20170114.24), libmodule-load-conditional-perl (<< 0.64), libmodule-load-perl (<< 0.32), libmodule-metadata-perl (<< 1.000031), libnet-perl (<= 1:1.22), libnet-ping-perl (<< 2.43.01), libparams-check-perl (<< 0.38), libparent-perl (<< 0.234), libparse-cpan-meta-perl (<< 1.4417.001), libperl-ostype-perl (<< 1.009), libpod-escapes-perl (<< 1.07), libpod-parser-perl (<< 1.63), libpod-simple-perl (<< 3.32), libtest-harness-perl (<< 3.36.01), libtest-simple-perl (<< 1.001014), libtest-tester-perl (<< 0.114), libtest-use-ok-perl (<< 0.16), libthread-queue-perl (<< 3.09), libtime-local-perl (<< 1.2300), libunicode-collate-perl (<< 1.14), libversion-perl (<< 1:0.9916), libversion-requirements-perl (<< 0.101022), maildirsync (<< 1.2-2.1), mono-apache-server2 (<< 3.8-2.1), mono-apache-server4 (<< 3.8-2.1), mono-fastcgi-server2 (<< 3.8-2.1), mono-fastcgi-server4 (<< 3.8-2.1), patcher (<< 0.0.20040521-6.1), pdl (<< 1:2.007-4), perl (<< 5.24.1~), podlators-perl (<< 2.3.1), polygen-data (<< 1.0.6.ds2-13.1), pristine-tar (<< 1.33), pure-ftpd-common (<< 1.0.36-3.2), rinse (<< 3.0.7), shorewall (<< 4.6.4.3-2), shorewall-core (<< 4.6.4.3-2), tvtime (<< 1.0.2-14)
+Replaces: libansicolor-perl (<< 4.04), libarchive-tar-perl (<< 2.04.01), libattribute-handlers-perl (<< 0.99), libautodie-perl (<< 2.29-2), libcpan-meta-perl (<< 2.150005), libcpan-meta-requirements-perl (<< 2.140), libcpan-meta-yaml-perl (<< 0.018), libdigest-perl (<< 1.17.01), libexperimental-perl (<< 0.016), libextutils-cbuilder-perl (<< 0.280225), libextutils-command-perl (<< 7.10.02), libextutils-install-perl (<< 2.04), libextutils-parsexs-perl (<< 3.310000), libfile-spec-perl (<< 3.6301), libhttp-tiny-perl (<< 0.056.001), libi18n-langtags-perl (<< 0.40), libio-zlib-perl (<< 1.10), libjson-pp-perl (<< 2.27300.01), liblocale-codes-perl (<< 3.37), liblocale-maketext-perl (<< 1.26.01), liblocale-maketext-simple-perl (<< 0.21.01), libmath-bigint-perl (<< 1.999715), libmath-complex-perl (<< 1.59), libmodule-corelist-perl (<< 5.20170114.24), libmodule-load-conditional-perl (<< 0.64), libmodule-load-perl (<< 0.32), libmodule-metadata-perl (<< 1.000031), libnet-perl, libnet-ping-perl (<< 2.43.01), libpackage-constants-perl, libparams-check-perl (<< 0.38), libparent-perl (<< 0.234), libparse-cpan-meta-perl (<< 1.4417.001), libperl-ostype-perl (<< 1.009), libpod-escapes-perl (<< 1.07), libpod-parser-perl (<< 1.63), libpod-simple-perl (<< 3.32), libtest-harness-perl (<< 3.36.01), libtest-simple-perl (<< 1.001014), libtest-tester-perl (<< 0.114), libtest-use-ok-perl (<< 0.16), libthread-queue-perl (<< 3.09), libtime-local-perl (<< 1.2300), libunicode-collate-perl (<< 1.14), libversion-perl (<< 1:0.9916), libversion-requirements-perl, perl-base (<< 5.22.0~), perl-modules, podlators-perl
+Provides: libansicolor-perl, libarchive-tar-perl, libattribute-handlers-perl, libautodie-perl, libcpan-meta-perl, libcpan-meta-requirements-perl, libcpan-meta-yaml-perl, libdigest-perl, libexperimental-perl, libextutils-cbuilder-perl, libextutils-command-perl, libextutils-install-perl, libextutils-parsexs-perl, libfile-spec-perl, libhttp-tiny-perl, libi18n-langtags-perl, libio-zlib-perl, libjson-pp-perl, liblocale-codes-perl, liblocale-maketext-perl, liblocale-maketext-simple-perl, libmath-bigint-perl, libmath-complex-perl, libmodule-corelist-perl, libmodule-load-conditional-perl, libmodule-load-perl, libmodule-metadata-perl, libnet-perl, libnet-ping-perl, libparams-check-perl, libparent-perl, libparse-cpan-meta-perl, libperl-ostype-perl, libpod-escapes-perl, libpod-parser-perl, libpod-simple-perl, libtest-harness-perl, libtest-simple-perl, libtest-tester-perl, libtest-use-ok-perl, libthread-queue-perl, libtime-local-perl, libunicode-collate-perl, libversion-perl, libversion-requirements-perl, perl-modules, podlators-perl
+Filename: ./perl-modules-5.24_5.24.1-2ubuntu1.1_all.deb
+Size: 2758370
+MD5sum: f788de564e8f2fceaa75ce7a2e87e0d9
+SHA1: 89fef0642bdcff3b83c986d12318130a07dff39a
+SHA256: 023c9169d1c0570923d7a032f69f15322786275858858de32073653f1e6b4206
+Section: perl
+Priority: standard
+Multi-Arch: foreign
+Homepage: http://dev.perl.org/perl5/
+Description: Core Perl modules
+ Architecture independent Perl modules.  These modules are part of Perl and
+ required if the `perl' package is installed.
+ .
+ Note that this package only exists to save archive space and should be
+ considered an internal implementation detail of the `perl' package.
+ Other packages should not depend on `perl-modules-5.24' directly, they
+ should use `perl' (which depends on `perl-modules-5.24') instead.
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
+

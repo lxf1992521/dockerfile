@@ -1,0 +1,120 @@
+Package: debhelper
+Version: 10.2.2ubuntu1~ubuntu16.04.1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 1307
+Depends: autotools-dev, binutils, dh-autoreconf (>= 12~), dh-strip-nondeterminism, dpkg (>= 1.16.2), dpkg-dev (>= 1.18.2~), file (>= 3.23), libdpkg-perl (>= 1.17.14), man-db (>= 2.5.1-1), po-debconf, perl
+Suggests: dh-make
+Breaks: dh-systemd (<< 1.38)
+Replaces: dh-systemd (<< 1.38)
+Filename: ./debhelper_10.2.2ubuntu1~ubuntu16.04.1_all.deb
+Size: 743304
+MD5sum: 51b8365ad88bd3d6d32da2fa2bd144a8
+SHA1: 5a967a4603acc7b2bcd4a22daef3c554ebe82038
+SHA256: 596b7ee7e9f1efa3c4a8547a11e11462155484347c639744387cf0f84412a5c7
+Section: devel
+Priority: optional
+Multi-Arch: foreign
+Description: helper programs for debian/rules
+ A collection of programs that can be used in a debian/rules file to
+ automate common tasks related to building Debian packages. Programs
+ are included to install various files into your package, compress
+ files, fix file permissions, integrate your package with the Debian
+ menu system, debconf, doc-base, etc. Most Debian packages use debhelper
+ as part of their build process.
+Original-Maintainer: Debhelper Maintainers <debhelper-devel@lists.alioth.debian.org>
+
+Package: dh-autoreconf
+Version: 12~ubuntu16.04.1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 44
+Depends: perl, debhelper, autoconf, automake | automaken, autopoint, libtool (>= 2.4.2)
+Enhances: cdbs, debhelper
+Filename: ./dh-autoreconf_12~ubuntu16.04.1_all.deb
+Size: 15694
+MD5sum: 43d4d5c09998e771d54eddd4ce2610ec
+SHA1: 16fcf599fbc7ad863043710e9fd010e8e1b46ec2
+SHA256: a11908df3373fb609d0dff96a67cba456dfdc51c0d72ca954614b81fd1956c51
+Section: devel
+Priority: optional
+Multi-Arch: foreign
+Description: debhelper add-on to call autoreconf and clean up after the build
+ dh-autoreconf provides a debhelper sequence addon named 'autoreconf' and two
+ commands, dh_autoreconf and dh_autoreconf_clean.
+ .
+ The dh_autoreconf command creates a list of the files and their checksums,
+ calls autoreconf and then creates a second list for the new files.
+ .
+ The dh_autoreconf_clean command compares these two lists and removes all
+ files which have been added or changed (files may be excluded if needed).
+ .
+ For CDBS users, a rule is provided to call the dh-autoreconf programs at
+ the right time.
+Original-Maintainer: Julian Andres Klode <jak@debian.org>
+
+Package: dh-systemd
+Source: debhelper
+Version: 10.2.2ubuntu1~ubuntu16.04.1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 104
+Depends: debhelper (>= 9.20160709)
+Filename: ./dh-systemd_10.2.2ubuntu1~ubuntu16.04.1_all.deb
+Size: 2604
+MD5sum: a1f6cf39f6b8dd8f760132f5851fb998
+SHA1: e57247abeea9942aaf922b2393992b0c7ca8d6b3
+SHA256: e44f5d87027dc0f9fa3800a00bb0279e8b0b05ca0ee7832f0adb22b587a79a59
+Section: oldlibs
+Priority: extra
+Multi-Arch: foreign
+Description: debhelper add-on to handle systemd unit files - transitional package
+ This package is for transitional purposes and can be removed safely.
+Original-Maintainer: Debhelper Maintainers <debhelper-devel@lists.alioth.debian.org>
+
+Package: meson
+Version: 0.40.1-1~ubuntu16.04.1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 1053
+Depends: ninja-build (>= 1.6), python3
+Filename: ./meson_0.40.1-1~ubuntu16.04.1_all.deb
+Size: 171358
+MD5sum: 8652c72e1b161cf4fc3e1c808b11346b
+SHA1: b9b4045eeb078bdd88f023f8b27941042a773882
+SHA256: 6436f315f6939c88ef1a1b0817c564374e41d2f24647ae48fc2e211312c3874c
+Section: devel
+Priority: optional
+Homepage: http://mesonbuild.com
+Description: high-productivity build system
+ Meson is a build system designed to increase programmer
+ productivity. It does this by providing a fast, simple and easy to
+ use interface for modern software development tools and practices.
+Original-Maintainer: Jussi Pakkanen <jpakkane@gmail.com>
+
+Package: ninja-build
+Version: 1.7.1-1~ubuntu16.04.1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 286
+Depends: libc6 (>= 2.15), libstdc++6 (>= 5.2)
+Conflicts: ninja
+Filename: ./ninja-build_1.7.1-1~ubuntu16.04.1_amd64.deb
+Size: 91424
+MD5sum: 6384d9c31ca18803e90b7bf3f5c3ab28
+SHA1: ab64ea16c36a39bbfd6929351fff8e2d5768e801
+SHA256: 8f8ba3ccb7873cb264bd648437eb8e7d7abd4093254135f6830e368a25512b9f
+Section: devel
+Priority: optional
+Homepage: https://ninja-build.org/
+Description: small build system closest in spirit to Make
+ Ninja is yet another build system. It takes as input the interdependencies of
+ files (typically source code and output executables) and orchestrates
+ building them, quickly.
+ .
+ Ninja joins a sea of other build systems. Its distinguishing goal is to be
+ fast. It is born from the Chromium browser project, which has over 30,000
+ source files and whose other build systems can take ten seconds to start
+ building after changing one file. Ninja is under a second.
+Original-Maintainer: Felix Geyer <fgeyer@debian.org>
+

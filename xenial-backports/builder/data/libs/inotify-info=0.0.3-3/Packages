@@ -1,0 +1,19 @@
+Package: inotify-info
+Version: 0.0.3-3
+Architecture: amd64
+Maintainer: Daniel Baumann <daniel@debian.org>
+Installed-Size: 86
+Depends: libc6 (>= 2.17), libstdc++6 (>= 5.2)
+Filename: ./inotify-info_0.0.3-3_amd64.deb
+Size: 29638
+MD5sum: e14393ce424fee5cad3bdf088b3a3ef6
+SHA1: 8c434fcee7fb0b84441501e387bae91c8e8164b9
+SHA256: 4598370d6d1579a06b6fd23f361162c6300b8315de4bd6da011917b6a98f0282
+Section: utils
+Priority: optional
+Homepage: https://github.com/mikesart/inotify-info
+Description: tracking the number of inotify watches
+ The Linux inotify system can be difficult to debug when the system runs out of
+ watches. inotify-info allows tracking down how many inotify watches, instances,
+ and which files are being watched.
+

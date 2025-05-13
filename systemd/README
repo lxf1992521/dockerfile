@@ -1,0 +1,43 @@
+https://systemd.io/CONTAINER_INTERFACE/
+
+- Log
+  docker run --restart=unless-stopped --network=host --tmpfs /run -v /sys/fs/cgroup:/sys/fs/cgroup:ro -v $PWD/systemd-journald.service:/usr/lib/systemd/system/systemd-journald.service --name systemd -d lxf1992521/systemd:centos sh -c 'sleep 3 & exec /usr/lib/systemd/systemd'
+
+- Docker
+  ... -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker ...
+
+- Run Command in Host By Docker
+  docker run --rm -it -v /usr/bin/systemd-run:/usr/bin/systemd-run -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket debian:bullseye-20230522-slim systemd-run bash -c 'echo hello'
+
+  # https://github.com/systemd/pystemd
+  # debian：apt install python3-pystemd
+
+- debian iptables on centos 7
+  因为 centos 7 使用的是 iptables ，而 debian 默认为 nftables，所以需要将的debian 容器内部的 iptables 软链到 iptables-legacy
+
+    update-alternatives --set iptables  /usr/sbin/iptables-legacy
+    update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+    update-alternatives --set arptables /usr/sbin/arptables-legacy
+    update-alternatives --set ebtables  /usr/sbin/ebtables-legacy
+
+- k8s 的 emptydir 与 systemd 的 /run 兼容性
+  k8s 的 emptydir 卷的生命周期与 Pod 的生命周期保持一致，也就是说即使Pod 内的 Container 重启了（或者 Node 重启了），只要 Pod 不删除，则 emptydir 内的数据依旧保留
+  但是 systemd 每次启动时都需要其 /run 目录保持清洁（为空），与这种特性不兼容，所以需要特殊处理
+
+  - Node 重启
+    可以设置 emptyDir.medium 为 Memory，这样 Node 重启了，emptyDir 的数据也就清空了
+
+  - Container 重启
+    需要在 systemd 启动前，清空 /run 目录和 /run/lock 目录（debian容器特有），否则可能造成内部的 service 启动异常。
+    find /run/ -mindepth 1 -delete &> /dev/null; find /run/lock/ -mindepth 1 -delete &> /dev/null;
+
+  参考链接：
+  1. https://kubernetes.io/zh-cn/docs/concepts/storage/volumes/#emptydir
+  2. https://github.com/kubernetes/kubernetes/issues/53423
+
+- 开启 debian 的 locales
+  echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen
+  apt install locales
+
+- 开启 centos 的 locales
+  localedef -f UTF-8 -i zh_CN zh_CN.utf8

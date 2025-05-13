@@ -1,0 +1,33 @@
+# docker build -t systemd:debian --no-cache --force-rm --network=host - < debian.systemd
+#
+# docker run --rm -it --network=host \
+#            --tmpfs /run --tmpfs /run/lock -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+#            --name systemd systemd:debian
+FROM debian:12-slim
+
+ENV container docker
+ENV DEBIAN_FRONTEND noninteractive
+
+STOPSIGNAL SIGRTMIN+3
+
+RUN apt-get -qq update ; \
+    apt-get -qq dist-upgrade ; \
+    apt-get -qq install systemd systemd-sysv > /dev/null ; \
+      rm -rf /lib/systemd/system/multi-user.target.wants/* ; \
+      rm -rf /etc/systemd/system/*.wants/* ; \
+      rm -rf /lib/systemd/system/local-fs.target.wants/* ; \
+      rm -rf /lib/systemd/system/sockets.target.wants/*udev* ; \
+      rm -rf /lib/systemd/system/sockets.target.wants/*initctl* ; \
+      rm -rf /lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup* ; \
+      rm -rf /lib/systemd/system/systemd-update-utmp* ; \
+    systemd_v=$(dpkg-query --showformat='${Version}' --show systemd); \
+      echo "Package: systemd" > /etc/apt/preferences.d/systemd; \
+      echo "Pin: version $systemd_v" >> /etc/apt/preferences.d/systemd; \
+      echo "Pin-Priority: 999" >> /etc/apt/preferences.d/systemd; \
+    rm -rf /var/log/journal; \
+      echo ReadKMsg=no >> /etc/systemd/journald.conf; \
+      echo RuntimeMaxUse=10M >> /etc/systemd/journald.conf; \
+    apt-get clean all ; \
+    find /run /tmp /var/tmp /var/lib/apt/lists -mindepth 1 -delete
+
+CMD ["bash", "-c", "rm -rf /run/* /run/lock/* 2> /dev/null; sleep infinity & exec /lib/systemd/systemd"]

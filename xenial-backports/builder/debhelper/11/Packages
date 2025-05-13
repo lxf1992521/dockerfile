@@ -1,0 +1,399 @@
+Package: cmake
+Version: 3.10.2-1ubuntu2.18.04.2~cloud0
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 16179
+Depends: cmake-data (= 3.10.2-1ubuntu2.18.04.2~cloud0), procps, libarchive13, libc6 (>= 2.15), libcurl3 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc1 (>= 1:3.0), libjsoncpp1, librhash0 (>= 1.2.6), libstdc++6 (>= 5.2), libuv1 (>= 1.4.2), zlib1g (>= 1:1.2.3.3)
+Recommends: gcc, make
+Suggests: cmake-doc, ninja-build
+Filename: ./cmake=3.10.2-1ubuntu2.18.04.2~cloud0/cmake_3.10.2-1ubuntu2.18.04.2~cloud0_amd64.deb
+Size: 2976440
+MD5sum: b75f4f31837f7349abc3c3b6f244ab55
+SHA1: 039d781271c1d17c5313a8b09d4e42016428f05d
+SHA256: c8e9fc45fdcb8e150fdc7d15ae68c16b5dfda087bf2815b8352bd6344f032c33
+Section: devel
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://cmake.org/
+Description: cross-platform, open-source make system
+ CMake is used to control the software compilation process using
+ simple platform and compiler independent configuration files. CMake
+ generates native makefiles and workspaces that can be used in the
+ compiler environment of your choice. CMake is quite sophisticated: it
+ is possible to support complex environments requiring system
+ configuration, pre-processor generation, code generation, and template
+ instantiation.
+ .
+ CMake was developed by Kitware as part of the NLM Insight
+ Segmentation and Registration Toolkit project. The ASCI VIEWS project
+ also provided support in the context of their parallel computation
+ environment. Other sponsors include the Insight, VTK, and VXL open
+ source software communities.
+Original-Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
+
+Package: cmake-curses-gui
+Source: cmake
+Version: 3.10.2-1ubuntu2.18.04.2~cloud0
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 4738
+Depends: cmake (= 3.10.2-1ubuntu2.18.04.2~cloud0), libarchive13, libc6 (>= 2.15), libcurl3 (>= 7.16.2), libgcc1 (>= 1:3.0), libjsoncpp1, libncurses5 (>= 6), librhash0 (>= 1.2.6), libstdc++6 (>= 5.2), libtinfo5 (>= 6), zlib1g (>= 1:1.2.3.3)
+Filename: ./cmake=3.10.2-1ubuntu2.18.04.2~cloud0/cmake-curses-gui_3.10.2-1ubuntu2.18.04.2~cloud0_amd64.deb
+Size: 1429750
+MD5sum: 8a3afc1e7e495f0822f237cd48eba6df
+SHA1: 6321dc5c0a518d3832fc76bb105a7e43a07a2289
+SHA256: 7420108207552c265ca0beab636552a0ed0599a0234f370329c5d6aba6d11561
+Section: devel
+Priority: optional
+Homepage: https://cmake.org/
+Description: curses based user interface for CMake (ccmake)
+ CMake is used to control the software compilation process using simple
+ platform and compiler independent configuration files. CMake generates native
+ makefiles and workspaces that can be used in the compiler environment of your
+ choice.
+ .
+ This package provides the CMake curses interface. Project configuration
+ settings may be specified interactively through this GUI. Brief instructions
+ are provided at the bottom of the terminal when the program is running. The
+ main executable file for this GUI is "ccmake".
+Original-Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
+
+Package: cmake-data
+Source: cmake
+Version: 3.10.2-1ubuntu2.18.04.2~cloud0
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 6585
+Filename: ./cmake=3.10.2-1ubuntu2.18.04.2~cloud0/cmake-data_3.10.2-1ubuntu2.18.04.2~cloud0_all.deb
+Size: 1351486
+MD5sum: f0cbc82460b7457e8811d53c7bacda58
+SHA1: 1d4288f56bb0fa267961c4e644de3580693f504e
+SHA256: a762ad91073f6432849abbf4633efaf6307a04cb13a9bbf0b5207935f2708dfe
+Section: devel
+Priority: optional
+Homepage: https://cmake.org/
+Description: CMake data files (modules, templates and documentation)
+ This package provides CMake architecture independent data files (modules,
+ templates, documentation etc.). Unless you have cmake installed, you probably
+ do not need this package.
+Original-Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
+
+Package: cmake-doc
+Source: cmake
+Version: 3.10.2-1ubuntu2.18.04.2~cloud0
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 16360
+Depends: cmake-data (= 3.10.2-1ubuntu2.18.04.2~cloud0), libjs-sphinxdoc (>= 1.0)
+Recommends: doc-base
+Suggests: cmake
+Filename: ./cmake=3.10.2-1ubuntu2.18.04.2~cloud0/cmake-doc_3.10.2-1ubuntu2.18.04.2~cloud0_all.deb
+Size: 1072706
+MD5sum: e25f5d56e7875c268f68156813810f36
+SHA1: 94be1f4e4715fc2eaae2338bb1df09804006c51a
+SHA256: d160a3c491381ed22e87fea3814dc9db5a9a415b27b5b8662fc8a2ce1405771d
+Section: doc
+Priority: optional
+Homepage: https://cmake.org/
+Description: extended documentation in various formats for CMake
+ CMake is used to control the software compilation process using simple
+ platform and compiler independent configuration files. CMake generates native
+ makefiles and workspaces that can be used in the compiler environment of your
+ choice.
+ .
+ This package provides additional documentation in various formats like HTML or
+ plain text.
+Original-Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
+
+Package: cmake-qt-gui
+Source: cmake
+Version: 3.10.2-1ubuntu2.18.04.2~cloud0
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 5141
+Depends: cmake (= 3.10.2-1ubuntu2.18.04.2~cloud0), libarchive13, libc6 (>= 2.15), libcurl3 (>= 7.16.2), libgcc1 (>= 1:3.0), libjsoncpp1, libqt5core5a (>= 5.5.0), libqt5gui5 (>= 5.0.2) | libqt5gui5-gles (>= 5.0.2), libqt5widgets5 (>= 5.2.0), librhash0 (>= 1.2.6), libstdc++6 (>= 5.2), zlib1g (>= 1:1.2.3.3)
+Provides: cmake-gui
+Filename: ./cmake=3.10.2-1ubuntu2.18.04.2~cloud0/cmake-qt-gui_3.10.2-1ubuntu2.18.04.2~cloud0_amd64.deb
+Size: 1546218
+MD5sum: 7514465473058c6acdabfcf6c94cb02e
+SHA1: a822305af1ba545eed8d1cdd8d705c2e58df8339
+SHA256: a99419e2cb9184b47b267f0f789bc0699b17471b86aad808a1baa91da7a09c25
+Section: devel
+Priority: optional
+Homepage: https://cmake.org/
+Description: Qt based user interface for CMake (cmake-gui)
+ CMake is used to control the software compilation process using simple
+ platform and compiler independent configuration files. CMake generates native
+ makefiles and workspaces that can be used in the compiler environment of your
+ choice.
+ .
+ This package provides the CMake Qt based GUI. Project configuration
+ settings may be specified interactively. Brief instructions are provided at
+ the bottom of the window when the program is running. The main executable
+ file for this GUI is "cmake-gui".
+Original-Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
+
+Package: debhelper
+Version: 11.1.4ubuntu1~cloud0
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 1580
+Depends: autotools-dev, binutils, dh-autoreconf (>= 16~), dh-strip-nondeterminism (>= 0.028~), dpkg (>= 1.16.2~), dpkg-dev (>= 1.18.2~), file (>= 3.23), libdpkg-perl (>= 1.17.14), man-db, po-debconf, perl
+Suggests: dh-make, dwz
+Breaks: cmake (<< 3.9~), dh-systemd (<< 1.38), meson (<< 0.40.0~)
+Replaces: dh-systemd (<< 1.38)
+Filename: ./debhelper=11.1.4ubuntu1~cloud0/debhelper_11.1.4ubuntu1~cloud0_all.deb
+Size: 912032
+MD5sum: 186b787ba5b3e8e88d16ccabd7f8ab0a
+SHA1: 3035e771c9c11e0da6dd0a7ca1a4d8c68c20b450
+SHA256: ff23593a1546757b97f0d963db4c24151f6eb6a4c01f52d847331aced55afb65
+Section: devel
+Priority: optional
+Multi-Arch: foreign
+Description: helper programs for debian/rules
+ A collection of programs that can be used in a debian/rules file to
+ automate common tasks related to building Debian packages. Programs
+ are included to install various files into your package, compress
+ files, fix file permissions, integrate your package with the Debian
+ menu system, debconf, doc-base, etc. Most Debian packages use debhelper
+ as part of their build process.
+Original-Maintainer: Debhelper Maintainers <debhelper@packages.debian.org>
+
+Package: dh-autoreconf
+Version: 17~cloud0
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 45
+Depends: perl, debhelper, autoconf, automake, autopoint, libtool (>= 2.4.2)
+Enhances: cdbs, debhelper
+Breaks: dpatch (<< 2.0.38+nmu1~), quilt (<< 0.63-8.2~)
+Filename: ./dh-autoreconf_17~cloud0_all.deb
+Size: 15868
+MD5sum: 15090a8bc8e2f3e7eaa7b8514de2857f
+SHA1: 31ada2896eefc439b8415be203309473768e24fa
+SHA256: 97b96590e652a25b5b2b45f6ab1f19574f1c276bf1d78f97bc8a03dab521afdc
+Section: devel
+Priority: optional
+Multi-Arch: foreign
+Description: debhelper add-on to call autoreconf and clean up after the build
+ dh-autoreconf provides a debhelper sequence addon named 'autoreconf' and two
+ commands, dh_autoreconf and dh_autoreconf_clean.
+ .
+ The dh_autoreconf command creates a list of the files and their checksums,
+ calls autoreconf and then creates a second list for the new files.
+ .
+ The dh_autoreconf_clean command compares these two lists and removes all
+ files which have been added or changed (files may be excluded if needed).
+ .
+ For CDBS users, a rule is provided to call the dh-autoreconf programs at
+ the right time.
+Original-Maintainer: Julian Andres Klode <jak@debian.org>
+
+Package: dh-python
+Version: 3.20180325ubuntu2~cloud1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 429
+Depends: python3:any (>= 3.3.2-2~)
+Suggests: libdpkg-perl, dpkg-dev
+Breaks: python3 (<< 3.3.2-4~)
+Replaces: python3 (<< 3.3.2-4~)
+Filename: ./dh-python_3.20180325ubuntu2~cloud1_all.deb
+Size: 89136
+MD5sum: a07e063502de60ed8023b547e92f9fa2
+SHA1: 1df941d2332ad88fababfca300745b1365f5579f
+SHA256: 69881573b49bfa2ff80c5c43c1dfb2f3370a66c44da19fe2dab91089e42c6dd2
+Section: python
+Priority: optional
+Multi-Arch: foreign
+Description: Debian helper tools for packaging Python libraries and applications
+ This package contains:
+  * pybuild - invokes various build systems for requested Python versions in
+    order to build modules and extensions
+  * dh_python2 - calculates Python 2.X dependencies for Debian packages,
+    adds maintainer scripts to byte compile files, etc.
+  * dh_python3 - calculates Python 3.X dependencies for Debian packages,
+    adds maintainer scripts to byte compile files, etc.
+  * dh_pypy - calculates PyPy dependencies for Debian packages,
+    adds maintainer scripts to byte compile files, etc.
+Original-Maintainer: Piotr Ożarowski <piotr@debian.org>
+
+Package: dh-strip-nondeterminism
+Source: strip-nondeterminism
+Version: 0.040-1.1~build1~cloud0
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 23
+Depends: debhelper, libfile-stripnondeterminism-perl (= 0.040-1.1~build1~cloud0), libtimedate-perl, perl:any
+Filename: ./strip-nondeterminism=0.040-1.1~build1~cloud0/dh-strip-nondeterminism_0.040-1.1~build1~cloud0_all.deb
+Size: 5174
+MD5sum: 3324e7c3937c84d985bc17edbdb2add8
+SHA1: 7f1da7f34992aced2f7018ca9ca5fb655bfaa0d6
+SHA256: cfcf7256fc15f378f7e56551723f9c7f7d06e086b9f068fbd692cddbf5942460
+Section: devel
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://reproducible-builds.org/
+Description: file non-deterministic information stripper — Debhelper add-on
+ StripNondeterminism is a library for stripping non-deterministic information
+ such as timestamps and filesystem ordering from various file and archive
+ formats.
+ .
+ This can be used as a post-processing step to improve the reproducibility of a
+ build product, when the build process itself cannot be made deterministic.
+ .
+ It is used as part of the Reproducible Builds project, although it should be
+ considered a temporary workaround which should not be needed in the long
+ term; upstream software should be reproducible even without using such a tool.
+ .
+ This package installs the ‘dh_strip_nondeterminism’ Debhelper command that
+ strips nondeterminism as part of a Debian package build process.
+Original-Maintainer: Reproducible builds folks <reproducible-builds@lists.alioth.debian.org>
+
+Package: dh-systemd
+Source: debhelper
+Version: 11.1.4ubuntu1~cloud0
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 120
+Depends: debhelper (>= 9.20160709)
+Filename: ./debhelper=11.1.4ubuntu1~cloud0/dh-systemd_11.1.4ubuntu1~cloud0_all.deb
+Size: 2598
+MD5sum: f0452b1cd23ea395ff2dae3103e38335
+SHA1: dfd2fefc123de7a27105eae49b3c70aa7e493c56
+SHA256: cf60dc9e4b1fe527deb963f8f557081fd0caa3e4a3ee004a47debfc59f85499b
+Section: oldlibs
+Priority: optional
+Multi-Arch: foreign
+Description: debhelper add-on to handle systemd unit files - transitional package
+ This package is for transitional purposes and can be removed safely.
+Original-Maintainer: Debhelper Maintainers <debhelper@packages.debian.org>
+
+Package: libarchive-cpio-perl
+Version: 0.10-1~cloud0
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 39
+Depends: perl
+Filename: ./libarchive-cpio-perl_0.10-1~cloud0_all.deb
+Size: 9828
+MD5sum: 5599f266cee2d19e738fc74a10b4e5d1
+SHA1: 65721f48a892ccfa8a45f23a72f9437264c528cf
+SHA256: 963259a876ca2443d3745196feccb96c35db354613733bf6141e4febfb6e8f54
+Section: perl
+Priority: optional
+Homepage: https://metacpan.org/release/Archive-Cpio
+Description: module for manipulations of cpio archives
+ Archive::Cpio provides a few functions to read and write cpio files.
+ .
+ It allows one to read and write cpio files, to list, add, and remove
+ elements, and to manipulate them on the fly.
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+
+Package: libfile-stripnondeterminism-perl
+Source: strip-nondeterminism
+Version: 0.040-1.1~build1~cloud0
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 65
+Depends: libarchive-zip-perl, perl
+Recommends: libarchive-cpio-perl
+Filename: ./strip-nondeterminism=0.040-1.1~build1~cloud0/libfile-stripnondeterminism-perl_0.040-1.1~build1~cloud0_all.deb
+Size: 13640
+MD5sum: a3ac7125246b0dba0e90b1f4a4576571
+SHA1: cf6b80dc2d8c105d14dc926905b50bca9606eecf
+SHA256: f905caf4912598586fada4ab1a721d1c573d45159141b0606c944f0852024583
+Section: perl
+Priority: optional
+Homepage: https://reproducible-builds.org/
+Description: file non-deterministic information stripper — Perl module
+ StripNondeterminism is a library for stripping non-deterministic information
+ such as timestamps and filesystem ordering from various file and archive
+ formats.
+ .
+ This can be used as a post-processing step to improve the reproducibility of a
+ build product, when the build process itself cannot be made deterministic.
+ .
+ It is used as part of the Reproducible Builds project, although it should be
+ considered a temporary workaround which should not be needed in the long
+ term; upstream software should be reproducible even without using such a tool.
+ .
+ This package installs the Perl module ‘File::StripNondeterminism’.
+Original-Maintainer: Reproducible builds folks <reproducible-builds@lists.alioth.debian.org>
+
+Package: meson
+Version: 0.40.1-1~ubuntu16.04.1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 1053
+Depends: ninja-build (>= 1.6), python3
+Filename: ./meson_0.40.1-1~ubuntu16.04.1_all.deb
+Size: 171358
+MD5sum: 8652c72e1b161cf4fc3e1c808b11346b
+SHA1: b9b4045eeb078bdd88f023f8b27941042a773882
+SHA256: 6436f315f6939c88ef1a1b0817c564374e41d2f24647ae48fc2e211312c3874c
+Section: devel
+Priority: optional
+Homepage: http://mesonbuild.com
+Description: high-productivity build system
+ Meson is a build system designed to increase programmer
+ productivity. It does this by providing a fast, simple and easy to
+ use interface for modern software development tools and practices.
+Original-Maintainer: Jussi Pakkanen <jpakkane@gmail.com>
+
+Package: ninja-build
+Version: 1.8.2-1
+Architecture: amd64
+Maintainer: Felix Geyer <fgeyer@debian.org>
+Installed-Size: 289
+Depends: libc6 (>= 2.15), libstdc++6 (>= 5.2)
+Conflicts: ninja
+Filename: ./ninja-build_1.8.2-1_amd64.deb
+Size: 92568
+MD5sum: ee3f86052065f83983e5e651b87b579b
+SHA1: 99f9b6d68b080d973987cdfe651c3f921f6b0632
+SHA256: 8784077b04d79d17cb9a587f557c5db8299beadff383f29892f2e1f18c5d0deb
+Section: devel
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://ninja-build.org/
+Description: small build system closest in spirit to Make
+ Ninja is yet another build system. It takes as input the interdependencies of
+ files (typically source code and output executables) and orchestrates
+ building them, quickly.
+ .
+ Ninja joins a sea of other build systems. Its distinguishing goal is to be
+ fast. It is born from the Chromium browser project, which has over 30,000
+ source files and whose other build systems can take ten seconds to start
+ building after changing one file. Ninja is under a second.
+
+Package: strip-nondeterminism
+Version: 0.040-1.1~build1~cloud0
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 24
+Depends: libfile-stripnondeterminism-perl (= 0.040-1.1~build1~cloud0), perl:any
+Filename: ./strip-nondeterminism=0.040-1.1~build1~cloud0/strip-nondeterminism_0.040-1.1~build1~cloud0_all.deb
+Size: 5368
+MD5sum: 16c15726bb1811bbd7cc68f5667dbd12
+SHA1: 5235be42ec30c7304a048dd484c0095bec712e90
+SHA256: d61ddb8473640478d02769d89325e4ab73b0173b4d3acbaa2a8643266651da40
+Section: devel
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://reproducible-builds.org/
+Description: file non-deterministic information stripper — stand-alone tool
+ StripNondeterminism is a library for stripping non-deterministic information
+ such as timestamps and filesystem ordering from various file and archive
+ formats.
+ .
+ This can be used as a post-processing step to improve the reproducibility of a
+ build product, when the build process itself cannot be made deterministic.
+ .
+ It is used as part of the Reproducible Builds project, although it should be
+ considered a temporary workaround which should not be needed in the long
+ term; upstream software should be reproducible even without using such a tool.
+ .
+ This package installs the stand-alone ‘strip-nondeterminism’ tool.
+Original-Maintainer: Reproducible builds folks <reproducible-builds@lists.alioth.debian.org>
+

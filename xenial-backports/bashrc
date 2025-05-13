@@ -1,0 +1,121 @@
+#!/bin/bash
+
+source /etc/bash_completion
+
+export PS1="\n\u@Build:\[\033[01;34m\]\w\[\033[00m\]# "
+export DEB_BUILD_OPTIONS="noddebs parallel=7"
+
+# enable color support of ls and also add handy aliases
+alias ls='ls --color=auto'
+alias ll='ls --color=auto -alF'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+
+# APT SOURCES
+cat > /etc/apt/sources.list <<EOF
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial main universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main universe multiverse
+EOF
+for rel in yakkety zesty artful cosmic disco eoan groovy hirsute impish kinetic lunar mantic; do
+cat >> /etc/apt/sources.list <<EOF
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel} main universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-updates main universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-backports main universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu ${rel}-proposed main universe multiverse
+EOF
+done
+for rel in xenial bionic focal jammy noble oracular plucky; do
+cat >> /etc/apt/sources.list <<EOF
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ ${rel} main universe multiverse
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ ${rel}-updates main universe multiverse
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ ${rel}-backports main universe multiverse
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ ${rel}-proposed main universe multiverse
+EOF
+done
+apt-get -q update
+
+
+function en10 {
+    echo "deb [trusted=yes] file:/debhelper/10 ./" >> /etc/apt/sources.list.d/debhelper10.list
+    apt-get update && apt-get -qq dist-upgrade
+}
+
+function en11 {
+    # apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5EDB1B62EC4926EA
+    # echo "deb http://ubuntu-cloud.archive.canonical.com/ubuntu xenial-updates/queens main" > /etc/apt/sources.list.d/cloudarchive-queens.list
+    echo "deb [trusted=yes] file:/debhelper/11 ./" >> /etc/apt/sources.list.d/debhelper11.list
+    apt-get update && apt-get -qq dist-upgrade
+}
+
+function en12 {
+    echo "deb [trusted=yes] file:/debhelper/12 ./" > /etc/apt/sources.list.d/debhelper12.list
+    apt-get update && apt-get -qq dist-upgrade
+}
+
+function enfocal {
+    echo "deb [trusted=yes] file:/debhelper/focal ./" > /etc/apt/sources.list.d/focal.list
+    apt-get update && apt-get -qq dist-upgrade
+}
+
+function en13 {
+    echo "deb [trusted=yes] file:/debhelper/13 ./" > /etc/apt/sources.list.d/debhelper13.list
+    apt-get update && apt-get -qq dist-upgrade
+}
+
+
+# search/build packages from all source repo
+function en {
+    resp=$(apt-cache madison $1 | awk '{print $1"="$3"\t"$6"\t"$7}' | column -t)
+    resp_source=$(awk '$3 == "Sources"' <<<"$resp")
+    resp_amd64=$(awk '$3 == "amd64"' <<<"$resp")
+
+    for rel in plucky oracular noble mantic lunar kinetic jammy impish hirsute groovy focal eoan disco cosmic bionic artful zesty yakkety xenial;
+    do
+        for repo in $rel-backports $rel-updates $rel;
+        do
+            while read line;
+            do
+                if test -d /data/libs/$(awk '{print $1}' <<<"$line"); then
+                    line=$(sed 's/^/*/' <<<"$line")
+                else
+                    line=$(sed 's/^/ /' <<<"$line")
+                fi
+                case $rel in
+                    plucky|oracular|noble|jammy|focal|bionic|xenial)
+                        grep " $repo/" <<<"$line"
+                        ;;
+                    *)
+                        echo "$line"
+                        ;;
+                esac
+            done < <(grep " $repo/" <<<"$resp_source")
+        done
+    done
+    echo "$resp_amd64" | sed 's/^/ /'
+}
+
+function enlibs {
+    for i in $@; do
+        (cd /data/libs/$i && dpkg-scanpackages -m . > Packages)
+        echo "deb [trusted=yes] file:/data/libs/$i ./" > /etc/apt/sources.list.d/libs-${i%%=*}.list
+    done
+    apt-get update && apt-get -qq dist-upgrade
+}
+
+function bblibs {
+    apt-get -y build-dep $1 || return
+
+    id build >& /dev/null || useradd -m build
+    if [[ $2 -eq 1 ]]; then
+        su - build -c "DEB_BUILD_OPTIONS='noddebs' apt-get source -b $1" || return
+    else
+        su - build -c "DEB_BUILD_OPTIONS='noddebs parallel=7' apt-get source -b $1" || return
+    fi
+
+    mkdir -p /data/libs/$1 && mv /home/build/*.deb /data/libs/$1/
+    userdel -r build
+    echo
+    (cd /data/libs/$1 && ls -l *.deb && dpkg-scanpackages -m . > Packages)
+}
